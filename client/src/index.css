@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gradient background and page container */
+:root{
+  --bg-start:#eef2ff;
+  --bg-end:#f5f7ff;
+  --card:#ffffff;
+  --muted:#64748b;
+  --accent:#7c3aed;
+  --accent-2:#2563eb;
+}
+
+body{
+  background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+  min-height: 100vh;
+  color: #0f172a;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding: 1.5rem 0;
+}
+
+/* page container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* small utilities */
+.header-link { color: var(--accent); font-weight:600; }
+.card { background: var(--card); border-radius: 12px; box-shadow: 0 6px 18px rgba(15,23,42,0.06); }
+
+/* nicer buttons */
+.btn {
+  display:inline-flex; align-items:center; gap:8px;
+  padding: 8px 12px; border-radius:10px; font-weight:600; cursor:pointer;
+}
+.btn-primary { background: linear-gradient(90deg,var(--accent),var(--accent-2)); color:white; box-shadow:0 6px 12px rgba(92,36,196,0.12); }
+.btn-ghost { background:transparent; border:1px solid rgba(15,23,42,0.06); color:var(--muted); }
+.small { font-size:0.85rem; padding:6px 10px; }
+
+/* form styles */
+.form-card { padding: 1rem; border-radius: 10px; }
+.input { width:100%; padding:10px; border-radius:8px; border:1px solid #e6edf5; background:#fbfdff; }
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .grid-md { display:block; gap:12px; }
+}
